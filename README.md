@@ -44,3 +44,10 @@ I used the `useState` to manage the state of the `name` and `email` in the `Logi
 
 ### 13. Parameters
 I used the `route` and `route.params` in the `HomeScreen` to access the `name` and `email` from the `LoginScreen`
+
+## Screenshots 
+### IOS 
+![IOS Application Screenshot](./screenshots/ios-interface.jpg)
+
+### ANDROID 
+![Android Application Screenshot](./screenshots/android-interface.jpg)

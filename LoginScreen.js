@@ -57,7 +57,7 @@ export default function LoginScreen({ navigation }) {
                 </TouchableOpacity>
             </View>
             <View style={styles.register}>
-                <Text style={styles.registerText}>Haven't an account? </Text>
+                <Text style={styles.registerText}>Don't have an account? </Text>
                 <TouchableOpacity>
                     <Text style={styles.registerLink}>Register</Text>
                 </TouchableOpacity>

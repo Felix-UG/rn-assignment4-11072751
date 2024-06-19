@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
         height: hp('100%'),
         width: wp('100%'),
         paddingLeft: wp('5%'),
-        paddingBottom: hp('3%'),    
+        paddingBottom: hp('1%'),    
     },
 
     profile: {
