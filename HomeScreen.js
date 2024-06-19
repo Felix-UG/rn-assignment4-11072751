@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, TextInput, FlatList, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, FlatList, ScrollView } from 'react-native'
 import React from 'react';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import FeaturedJobs from './components/FeaturedJobs';
@@ -27,11 +27,11 @@ export default function HomeScreen({ route }) {
         {id: '1', companyLogo: require('./assets/burger-king-logo.png'), jobTitle: 'Jr Executive', companyName: 'Burger King', price: '$96,000/y', location: 'Los Angeles, US' },
         {id: '2', companyLogo: require('./assets/beats-logo.png'), jobTitle: 'Product Manager', companyName: 'Beats', price: '$84,000/y', location: 'Florida, US' },
         {id: '3', companyLogo: require('./assets/facebook-logo.png'), jobTitle: 'Product Manager', companyName: 'Facebook', price: '$86,000/y', location: 'Florida, US' },
-        {id: '4', companyLogo: require('./assets/facebook-logo.png'), jobTitle: 'Senior Developer', companyName: 'Facebook', price: '$110,000/y', location: 'Cambridge,  UK' },
+        {id: '4', companyLogo: require('./assets/facebook-logo.png'), jobTitle: 'Senior Developer', companyName: 'Facebook', price: '$110,000/y', location: 'Cambridge, UK' },
         {id: '5', companyLogo: require('./assets/burger-king-logo.png'), jobTitle: 'HR Specialist', companyName: 'Burger King', price: '$98,000/y', location: 'London, UK' },
         {id: '6', companyLogo: require('./assets/facebook-logo.png'), jobTitle: 'Account Coordinator', companyName: 'Facebook', price: '$88,000/y', location: 'Texas, US' },
         {id: '7', companyLogo: require('./assets/beats-logo.png'), jobTitle: 'Sales Representative', companyName: 'Beats', price: '$75,000/y', location: 'Johannesburg, SA' },
-        {id: '8', companyLogo: require('./assets/burger-king-logo.png'), jobTitle: 'Java Developer', companyName: 'Burger King', price: '$99,500/y', location: 'Mumbai,  IN' },
+        {id: '8', companyLogo: require('./assets/burger-king-logo.png'), jobTitle: 'Java Developer', companyName: 'Burger King', price: '$99,500/y', location: 'Mumbai, IN' },
     ]
     
     
@@ -126,9 +126,8 @@ const styles = StyleSheet.create({
     container: {
         height: hp('100%'),
         width: wp('100%'),
-        // backgroundColor: 'lightblue',
         paddingLeft: wp('5%'),
-        paddingBottom: hp('2%'),    
+        paddingBottom: hp('3%'),    
     },
 
     profile: {
@@ -157,7 +156,6 @@ const styles = StyleSheet.create({
         marginTop: hp('2%'),
         flexDirection: 'row',
         justifyContent: 'space-between',
-        // backgroundColor: 'yellow',
         MarginRight: 5,
         height: hp('7%'),
       },
@@ -187,12 +185,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center'
-
     },
 
     featuredJobsBox: {
         height: 290,
-        // backgroundColor: 'lightgreen',
         marginTop: hp('3%'),
     },
 
@@ -200,10 +196,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingRight: wp('6%'),
-    }
-
-
-
-
+    },
 
 })

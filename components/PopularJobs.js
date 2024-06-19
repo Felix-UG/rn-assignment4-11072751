@@ -35,10 +35,9 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         paddingLeft: wp('5%'),
         paddingRight: wp('5%'),
-        // paddingTop: hp('2%'),
         paddingBottom: hp('2%'),
         marginTop: hp('3%'),
-        marginBottom: hp('-1%'),
+        marginBottom: hp('1%'),
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -46,21 +45,18 @@ const styles = StyleSheet.create({
     logoBox: {
         height: hp('10%'),
         width: 60,
-        // backgroundColor: 'green',
         alignItems: 'center',
         justifyContent: 'center',
     },
 
     details: {
         height: hp('7%'),
-        // backgroundColor: 'yellow',
         justifyContent: 'space-between',
         width: wp('65%'),
     },
 
     topInfo: {
         justifyContent: 'space-between',
-        // backgroundColor: 'pink',
         flexDirection: 'row',
         alignItems: 'center'
     },
@@ -69,8 +65,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        // backgroundColor: 'pink',
-    }
+    },
 
 
 })

@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
 
     topDetails: {
         flexDirection: 'row',
-        // justifyContent: 'space-between',
         alignItems: 'center'
     },
 
@@ -61,11 +60,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginTop: 80,
-    }
-
-
-
-      
-
+    },
 
 })
