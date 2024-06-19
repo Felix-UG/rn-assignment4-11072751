@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     },
 
     message2Text: {
-        width: wp('30%'),
+        width: wp('40%'),
         textAlign: 'center',
         color: '#AFB0B6',
         fontFamily: 'Circular Std',
