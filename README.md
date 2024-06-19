@@ -15,14 +15,15 @@ I used the `Text` component to display text in my app.
 I used the `ScrollView` component to make all the contents after the View component styled `profile` scrollable.
 
 ### 4. TextInput
-I used the `TextInput` component to allow users to input text in the searchbox.
+I used the `TextInput` component to allow users to type their `name` and `email` in the `LoginScreen` <br> 
+And also allow users to input text in the searchbox in the `HomeScreen`.
 
 ### 5. StyleSheet
 I used the `StyleSheet` to style my components.
 
 ### 6. Touchable Opacity 
-I used the touchable opacity to create touchable buttons. 
-Mainly the component styled `button` in the `LoginScreen` to allow users to move to the `HomeScreen` with a touch of the `button` using the `onPress` function.
+I used the touchable opacity to create touchable buttons. <br>
+Mainly the component styled `button` in the `LoginScreen` to allow users to move to the `HomeScreen` with a touch of the `button` using the `onPress` function. <br>
 The other touchable opacity components in my code do not have any `onPress` function yet.
 
 ### 7. FlatList 
