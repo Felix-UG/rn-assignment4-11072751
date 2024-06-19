@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, TextInput, FlatList } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, TextInput, FlatList, ScrollView } from 'react-native'
 import React from 'react';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import FeaturedJobs from './components/FeaturedJobs';
+import PopularJobs from './components/PopularJobs';
 
 const ProfilePic = require('./assets/profile-picture.png');
 const OnlineCircle = require('./assets/online-circle.png');
@@ -12,15 +13,26 @@ export default function HomeScreen({ route }) {
     const {name, email} = route.params
 
     const FeaturedJobsData = [
-        {id: '1', companyLogo: require('./assets/facebookLogo.png'), jobTitle: 'Software Engineer', companyName: 'Facebook', backgroundColor: 'red', price: '$120,00', location: 'Accra, Ghana' },
-        {id: '2', companyLogo: require('./assets/googleLogo.png'), jobTitle: 'Software Engineer', companyName: 'Google', backgroundColor: 'blue', price: '$120,00', location: 'Accra, Ghana' },
-        {id: '3', companyLogo: require('./assets/googleLogo.png'), jobTitle: 'Software Engineer', companyName: 'Google', backgroundColor: 'green', price: '$120,00', location: 'Accra, Ghana' },
-        {id: '4', companyLogo: require('./assets/facebookLogo.png'), jobTitle: 'Software Engineer', companyName: 'Facebook', backgroundColor: 'lightred', price: '$120,00', location: 'Accra, Ghana' },
-        {id: '5', companyLogo: require('./assets/googleLogo.png'), jobTitle: 'Software Engineer', companyName: 'Google', backgroundColor: 'brown', price: '$120,00', location: 'Accra, Ghana' },
-        {id: '6', companyLogo: require('./assets/facebookLogo.png'), jobTitle: 'Software Engineer', companyName: 'Facebook', backgroundColor: 'pink', price: '$120,00', location: 'Accra, Ghana' },
-        {id: '7', companyLogo: require('./assets/googleLogo.png'), jobTitle: 'Software Engineer', companyName: 'Google', backgroundColor: 'lightblue', price: '$120,00', location: 'Accra, Ghana' },
-        {id: '8', companyLogo: require('./assets/facebookLogo.png'), jobTitle: 'Software Engineer', companyName: 'Facebook', backgroundColor: 'lightgreen', price: '$120,00', location: 'Accra, Ghana' },
+        {id: '1', companyLogo: require('./assets/facebookLogo.png'), jobTitle: 'Software Engineer', companyName: 'Facebook', backgroundColor: '#4169E1', price: '$130,00', location: 'Accra, Ghana' },
+        {id: '2', companyLogo: require('./assets/googleLogo.png'), jobTitle: 'Cloud Engineer', companyName: 'Google', backgroundColor: '#151B54', price: '$110,00', location: 'Accra, Ghana' },
+        {id: '3', companyLogo: require('./assets/googleLogo.png'), jobTitle: 'Security Analyst', companyName: 'Google', backgroundColor: '#0E7C78', price: '$140,00', location: 'Accra, Ghana' },
+        {id: '4', companyLogo: require('./assets/facebookLogo.png'), jobTitle: 'IT Systems Engineer', companyName: 'Facebook', backgroundColor: '#92860D', price: '$100,00', location: 'Accra, Ghana' },
+        {id: '5', companyLogo: require('./assets/googleLogo.png'), jobTitle: 'Data Scientist', companyName: 'Google', backgroundColor: '#D3383F', price: '$190,00', location: 'Accra, Ghana' },
+        {id: '6', companyLogo: require('./assets/facebookLogo.png'), jobTitle: 'Web Developer', companyName: 'Facebook', backgroundColor: '#964E00', price: '$120,00', location: 'Accra, Ghana' },
+        {id: '7', companyLogo: require('./assets/googleLogo.png'), jobTitle: 'Computer Engineer', companyName: 'Google', backgroundColor: '#125913', price: '$150,00', location: 'Accra, Ghana' },
+        {id: '8', companyLogo: require('./assets/facebookLogo.png'), jobTitle: 'UX/UI Developer', companyName: 'Facebook', backgroundColor: '#B23737', price: '$90,00', location: 'Accra, Ghana' },
     ];
+
+    const PopularJobsData = [
+        {id: '1', companyLogo: require('./assets/burger-king-logo.png'), jobTitle: 'Jr Executive', companyName: 'Burger King', price: '$96,000/y', location: 'Los Angeles, US' },
+        {id: '2', companyLogo: require('./assets/beats-logo.png'), jobTitle: 'Product Manager', companyName: 'Beats', price: '$84,000/y', location: 'Florida, US' },
+        {id: '3', companyLogo: require('./assets/facebook-logo.png'), jobTitle: 'Product Manager', companyName: 'Facebook', price: '$86,000/y', location: 'Florida, US' },
+        {id: '4', companyLogo: require('./assets/facebook-logo.png'), jobTitle: 'Senior Developer', companyName: 'Facebook', price: '$110,000/y', location: 'Cambridge,  UK' },
+        {id: '5', companyLogo: require('./assets/burger-king-logo.png'), jobTitle: 'HR Specialist', companyName: 'Burger King', price: '$98,000/y', location: 'London, UK' },
+        {id: '6', companyLogo: require('./assets/facebook-logo.png'), jobTitle: 'Account Coordinator', companyName: 'Facebook', price: '$88,000/y', location: 'Texas, US' },
+        {id: '7', companyLogo: require('./assets/beats-logo.png'), jobTitle: 'Sales Representative', companyName: 'Beats', price: '$75,000/y', location: 'Johannesburg, SA' },
+        {id: '8', companyLogo: require('./assets/burger-king-logo.png'), jobTitle: 'Java Developer', companyName: 'Burger King', price: '$99,500/y', location: 'Mumbai,  IN' },
+    ]
     
     
     return (
@@ -37,6 +49,7 @@ export default function HomeScreen({ route }) {
                     </TouchableOpacity>
                 </View>
             </View>
+            <ScrollView>
             <View style={styles.search}>
                 <View style={styles.searchSpace}>
                     <Image source={SearchImage}/>
@@ -58,7 +71,7 @@ export default function HomeScreen({ route }) {
                 </View>
             </View>
             <View style={styles.featuredJobsBox}>
-                <View style={styles.featuredJobsTitle}>
+                <View style={styles.jobsHeading}>
                     <Text style={{fontSize:hp('3%'), fontWeight: 'bold'}}>Featured Jobs</Text>
                     <TouchableOpacity>
                         <Text style={{fontSize: hp('2%'), color: '#95969D', paddingTop: hp('0.5%')}}>See all</Text>
@@ -81,7 +94,29 @@ export default function HomeScreen({ route }) {
                     showsHorizontalScrollIndicator={false}
                 />
             </View>
-
+            <View style={styles.PopularJobsBox}>
+                <View style={styles.jobsHeading}>
+                    <Text style={{fontSize:hp('3%'), fontWeight: 'bold'}}>Popular Jobs</Text>
+                    <TouchableOpacity>
+                        <Text style={{fontSize: hp('2%'), color: '#95969D', paddingTop: hp('0.5%')}}>See all</Text>
+                    </TouchableOpacity>
+                </View>
+                <FlatList 
+                    data={PopularJobsData}
+                    renderItem={({ item }) => (
+                        <PopularJobs  
+                        companyLogo={item.companyLogo}
+                        jobTitle={item.jobTitle}
+                        companyName={item.companyName}
+                        price={item.price}
+                        location={item.location}
+                        />
+                    )}
+                    keyExtractor={item => item.id}
+                    showsVerticalScrollIndicator={false}
+                />
+            </View>
+            </ScrollView>
         </View>
     )
 }
@@ -93,6 +128,7 @@ const styles = StyleSheet.create({
         width: wp('100%'),
         // backgroundColor: 'lightblue',
         paddingLeft: wp('5%'),
+        paddingBottom: hp('2%'),    
     },
 
     profile: {
@@ -100,6 +136,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingRight: wp('5%'),
+        marginBottom: hp('1%'),
     },
 
     image: {
@@ -117,7 +154,7 @@ const styles = StyleSheet.create({
 
     search: {
         width: wp('90%'),
-        marginTop: hp('3%'),
+        marginTop: hp('2%'),
         flexDirection: 'row',
         justifyContent: 'space-between',
         // backgroundColor: 'yellow',
@@ -128,7 +165,7 @@ const styles = StyleSheet.create({
       searchSpace: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#F2F2F3',
+        backgroundColor: '#D3D3D3',
         width: wp('73%'),
         borderRadius: 10, 
         paddingLeft: 10,
@@ -145,7 +182,7 @@ const styles = StyleSheet.create({
       filter: {
         width: wp('13%'),
         height: hp('7%'),
-        backgroundColor: '#F2F2F3',
+        backgroundColor: '#D3D3D3',
         borderRadius: 10, 
         flexDirection: 'row',
         alignItems: 'center',
@@ -154,12 +191,12 @@ const styles = StyleSheet.create({
     },
 
     featuredJobsBox: {
-        height: hp('40%'),
+        height: 290,
         // backgroundColor: 'lightgreen',
         marginTop: hp('3%'),
     },
 
-    featuredJobsTitle: {
+    jobsHeading: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingRight: wp('6%'),
