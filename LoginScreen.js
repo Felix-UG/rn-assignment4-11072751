@@ -12,7 +12,7 @@ export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState ('');
 
     const handleLogin = () => {
-        navigation.navigate('Home');
+        navigation.navigate('Home', {name, email});
     };
 
     return (
@@ -64,12 +64,6 @@ export default function LoginScreen({ navigation }) {
             </View>
         </View>
     )
-
-
-
-
-
-
 }
 
 
@@ -141,7 +135,8 @@ const styles = StyleSheet.create({
     message2: {
         marginTop: hp('7%'),
         flexDirection: 'row',
-        alignItems: 'center',      
+        alignItems: 'center',    
+          
     },
 
     line: {
@@ -156,6 +151,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#AFB0B6',
         fontFamily: 'Circular Std',
+        fontSize: hp('2%'),
     },
 
     accountBox: {
