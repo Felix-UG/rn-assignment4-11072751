@@ -51,3 +51,5 @@ I used the `route` and `route.params` in the `HomeScreen` to access the `name` a
 
 ### ANDROID 
 ![Android Application Screenshot](./screenshots/android-interface.jpg)
+
+### END
